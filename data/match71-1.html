@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-175.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" style="margin-left:25">
+<HR>
+<H3><CENTER>ps20-175.cpp</CENTER></H3><HR>
+<PRE>
+void main()
+{
+<A NAME="0"></A>	int n,i,m,c,f;
+	
+	char str[20],substr[10],de[20],max;
+<FONT color="#0000ff"><div style="position:absolute;left:0"><A HREF="javascript:ZweiFrames('match71-0.html#0',2,'match71-top.html#0',1)"><IMG SRC="back.gif" ALT="other" BORDER="0" ALIGN="left"></A></div><B>	char *p,*q,*t;
+	while (scanf(&quot;%s%s&quot;,str,substr)!=EOF)
+	{
+		n=strlen(str);
+		m=strlen(substr);
+		max=0;
+		for(p=str;p&lt;(str+n);p++)
+		   if(*p&gt;max)
+		   {
+		   max=*p;
+<A NAME="1"></A>		   t=p;
+		   }
+		//t=&amp;max;
+		for(p=str,i=0;p&lt;(t+1);p++)</B></FONT><FONT color="#f63526"><div style="position:absolute;left:0"><A HREF="javascript:ZweiFrames('match71-0.html#1',2,'match71-top.html#1',1)"><IMG SRC="back.gif" ALT="other" BORDER="0" ALIGN="left"></A></div><B>
+		  de[i++]=*p;
+		for(c=i,q=substr;q&lt;(substr+m);q++)
+		  de[c++]=*q;
+		for(p=(t+1),f=c;p&lt;(str+n);p++)
+		  de[f++]=*p;
+		for(q=de;q&lt;(f+de);q++)
+		printf(&quot;%c&quot;,*q);
+		printf(&quot;\n&quot;);
+	}
+}</B></FONT>
+</PRE>
+</BODY>
+</HTML>

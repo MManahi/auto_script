@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-137.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<HR>
+<H3><CENTER>ps20-137.cpp</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A><FONT color="#0000ff"><A HREF="javascript:ZweiFrames('match10-1.html#0',3,'match10-top.html#0',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>void f(char str[15],char substr[4]);
+void main()
+{
+	char str[15],substr[4];
+	while (scanf(&quot;%s%s&quot;,str,substr)!=EOF) 
+	{
+	f(str,substr);
+	}
+}
+void f(char str[15],char substr[4])
+{
+	int i,j,k,l;
+	char a;
+	l=strlen(str);
+	a=str[0];
+	for(i=1;i&lt;l;i++)
+	   if(str[i]&gt;a) a=str[i];
+	for(i=0;i&lt;l;i++)
+	   if(str[i]==a) break;
+	for(j=l+3;j&gt;i+3;j--) str[j]=str[j-3];
+	for(j=i+1,k=0;k&lt;3;j++,k++) str[j]=substr[k];
+	printf(&quot;%s\n&quot;,str);
+}</B></FONT>
+</PRE>
+</BODY>
+</HTML>

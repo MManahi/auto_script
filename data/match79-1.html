@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-161.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" style="margin-left:25">
+<HR>
+<H3><CENTER>ps20-161.cpp</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A> main()
+{
+	char str[14],substr[14],*p=str,*p1,*p2=substr,max;
+<FONT color="#0000ff"><div style="position:absolute;left:0"><A HREF="javascript:ZweiFrames('match79-0.html#0',2,'match79-top.html#0',1)"><IMG SRC="back.gif" ALT="other" BORDER="0" ALIGN="left"></A></div><B>	int i,j,m,n,k;
+	while(scanf(&quot;%s %s&quot;,str,substr)!=EOF)
+	{
+		n=strlen(str);
+		max=str[0];
+		p1=str;
+		k=0;
+	    for(i=0;i&lt;n;i++)
+			if(str[i]&gt;max)
+			{
+				max=str[i];
+				k=i;
+			}						
+			for(p1=str+n-1;p1&gt;str+k;p1--)				
+				*(p1+3)=*p1;
+			p1=str;
+			*(p1+k+1)=*p2;
+			*(p1+k+2)=*(p2+1);
+			*(p1+k+3)=*(p2+2);</B></FONT>
+			for(p=str;p&lt;str+n+3;p++)
+		printf(&quot;%c&quot;,*p);
+         printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</PRE>
+</BODY>
+</HTML>

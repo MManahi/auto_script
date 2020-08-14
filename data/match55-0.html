@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-343.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<HR>
+<H3><CENTER>ps20-343.cpp</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A>
+void main()
+<FONT color="#0000ff"><A HREF="javascript:ZweiFrames('match55-1.html#0',3,'match55-top.html#0',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>{
+	int p,q,m,n,i;
+	char str[15],substr[5];
+
+	while(scanf(&quot;%s&quot;,str)!=EOF)
+	{
+		scanf(&quot;%s&quot;,substr);
+		p=strlen(str);
+		q=0;
+		for(i=1;i&lt;p;i++)
+		{
+<A NAME="1"></A>			if( (m=str[i]) &gt;(n=str[q]) ) </B></FONT>
+				q=i;
+			
+<FONT color="#f63526"><A HREF="javascript:ZweiFrames('match55-1.html#1',3,'match55-top.html#1',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>		}
+		for(i=0;i&lt;=q;i++) 
+		{printf(&quot;%c&quot;,str[i]);}
+		printf(&quot;%s&quot;,substr);
+		for(i=q+1;i&lt;p;i++)
+		{printf(&quot;%c&quot;,str[i]);}
+		printf(&quot;\n&quot;);
+	}</B></FONT>
+}
+</PRE>
+</BODY>
+</HTML>

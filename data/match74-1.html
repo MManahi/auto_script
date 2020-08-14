@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-318.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" style="margin-left:25">
+<HR>
+<H3><CENTER>ps20-318.cpp</CENTER></H3><HR>
+<PRE>
+int main()
+{
+	char a[11];
+	char b[4];
+	char max;
+	int i=0,j=0,k=0,m=0,y=0,temp;
+	for(i=0;i&lt;11;i++)
+<A NAME="0"></A>	{
+		a[i]='\0';
+	}
+<FONT color="#0000ff"><div style="position:absolute;left:0"><A HREF="javascript:ZweiFrames('match74-0.html#0',2,'match74-top.html#0',1)"><IMG SRC="back.gif" ALT="other" BORDER="0" ALIGN="left"></A></div><B>	while(cin&gt;&gt;a)
+	{
+		temp=0;
+	    cin&gt;&gt;b;
+	    max=a[0];
+		for(j=0;j&lt;strlen(a);j++)
+		{
+			if(a[j]&gt;max)
+			{
+				max=a[j];
+			    temp=j;
+			}
+		}
+		for(k=0;k&lt;=temp;k++)
+		{
+			cout&lt;&lt;a[k];
+		}
+		for(m=0;m&lt;3;m++)
+		{
+			cout&lt;&lt;b[m];
+		}
+		for(y=temp+1;y&lt;strlen(a);y++)
+		{
+			cout&lt;&lt;a[y];
+		}
+		cout&lt;&lt;endl;
+	}
+	return 0;
+}</B></FONT>
+</PRE>
+</BODY>
+</HTML>

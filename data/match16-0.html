@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-207.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<HR>
+<H3><CENTER>ps20-207.cpp</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A><FONT color="#0000ff"><A HREF="javascript:ZweiFrames('match16-1.html#0',3,'match16-top.html#0',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>void main()
+{    int j=0,i,ceshi,max,weizhi;
+    char str[30][10]={'\0'},substr[30][3]={'\0'},xin[30][13]={'\0'},*dizhi[30];
+    char *a,*b,*c;
+    while(scanf(&quot;%s %s&quot;,str[j],substr[j])!=EOF)
+    {j++;}
+    ceshi=j;</B></FONT>
+    
+
+<A NAME="1"></A>for (j=0;j&lt;ceshi;j++)
+{    
+	dizhi[j]=str[j];
+<FONT color="#f63526"><A HREF="javascript:ZweiFrames('match16-1.html#1',3,'match16-top.html#1',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>	weizhi=1;
+	max=*(dizhi[j]);
+	for (i=0;str[j][i]!='\0';i++)
+    {
+        if(*(str[j]+i)&gt;max)
+        {
+            max=*(str[j]+i);weizhi=i+1;
+        }
+    }
+   
+         a=&amp;str[j][0];b=&amp;substr[j][0];c=&amp;xin[j][0]; 
+   
+    for (i=0;i&lt;weizhi;i++)
+    {
+        *(c+i)=*(a+i);
+    }
+    
+    for (i=weizhi;i&lt;weizhi+3;i++)
+    {
+        *(c+i)=*(b+i-weizhi);
+    }
+    
+    for (i=weizhi;str[j][i]!='\0';i++)
+    {
+        *(c+3+i)=*(a+i);
+    }
+    
+    for (i=0;xin[j][i]!='\0';i++)
+    {
+        printf(&quot;%c&quot;,*(c+i));
+    }
+    printf(&quot;\n&quot;);
+}
+}</B></FONT>
+</PRE>
+</BODY>
+</HTML>

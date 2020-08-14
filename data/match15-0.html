@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-321.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<HR>
+<H3><CENTER>ps20-321.cpp</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A><FONT color="#0000ff"><A HREF="javascript:ZweiFrames('match15-1.html#0',3,'match15-top.html#0',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>void main()
+{
+	void in(char str[] , char substr[]);
+	char str[100], substr[100];
+	while ((scanf(&quot;%s%s&quot;,&amp;str,&amp;substr)) != EOF)
+		in(str, substr);
+}
+
+void in(char str[], char substr[])
+{
+	int i,k,max,l;
+	l=strlen(str);
+	max=str[0];
+	for(i=1;i&lt;l;i++)
+	{
+		if(max&lt;str[i])
+		{
+			max=str[i];
+			k=i;
+		}
+	}
+	for(i=0;i&lt;=k;i++)
+		printf(&quot;%c&quot;,str[i]);
+	printf(&quot;%s&quot;,substr);
+	for(i=k+1;i&lt;l;i++)</B></FONT>
+		printf(&quot;%c&quot;,str[i]);
+	printf(&quot;\n&quot;);
+}
+</PRE>
+</BODY>
+</HTML>

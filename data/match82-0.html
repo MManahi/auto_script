@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>ps20-136.cpp</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<HR>
+<H3><CENTER>ps20-136.cpp</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A><FONT color="#0000ff"><A HREF="javascript:ZweiFrames('match82-1.html#0',3,'match82-top.html#0',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>void main()
+{
+	char str[100][50],result[100][50];
+	int m,length[100],i=0,j,l,max,p,k,t;
+	do
+	{
+		gets(str[i]);
+		i++;
+		m=strlen(str[i-1]);
+	}
+	while(m!=0);
+	l=i-1;
+<A NAME="1"></A>	for(i=0;i&lt;l;i++)
+	{</B></FONT>
+		length[i]=strlen(str[i]);
+<FONT color="#f63526"><A HREF="javascript:ZweiFrames('match82-1.html#1',3,'match82-top.html#1',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>		max=str[i][0];
+		p=0;
+		for(j=1;j&lt;length[i]-4;j++)
+		{
+			if(str[i][j]&gt;max)
+			{
+				max=str[i][j];
+				p=j;
+			}
+		}
+		for(j=0;j&lt;=p;j++)
+			result[i][j]=str[i][j];
+		for(j=p+1;j&lt;=p+3;j++)
+			result[i][j]=str[i][length[i]+j-p-4];
+		for(j=p+4;j&lt;length[i];j++)
+			result[i][j]=str[i][j-3];
+		for(j=length[i]-1;j&lt;50;j++)
+			result[i][j]='\0';</B></FONT>
+	}
+	for(j=0;j&lt;l;j++)
+	{
+		t=strlen(result[j]);
+		for(k=0;k&lt;t;k++)
+			printf(&quot;%c&quot;,result[j][k]);
+		printf(&quot;\n&quot;);
+	}
+}
+</PRE>
+</BODY>
+</HTML>
