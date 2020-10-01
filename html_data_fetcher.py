@@ -47,22 +47,9 @@ for element in HTML_data:
         score = sub_data[1].split('(')
         similarity = score[1].replace('%)', '')
         data.append([sub_data[0], score[0], 1])
-    #data.append(sub_data)
-#print(data)
-for i in range(0, 199):
-    # for exculsion_data in sub_data:
-    # var = exculsion_data.split('-')[1].split('.')[0]
-    # exclusion.append(var)
-    # random_num = random.randint(0,499)
-    # print(random_num)
-    inclusion = []
-    inclusion_a = 'ps20-' + str(random.randint(0, 499)) + '.cpp'
-    inclusion_b = 'ps20-' + str(random.randint(0, 499)) + '.cpp'
-    if inclusion not in data:
-        inclusion = inclusion.append([inclusion_a, inclusion_b, 0])
-    all_data = [data, inclusion]
+
 # store the data into dataframe
-dataFrame = pd.DataFrame(data=all_data)
+dataFrame = pd.DataFrame(data=data)
 
 # convert the dataframe into csv
 dataFrame.to_csv('result.csv', index= False)
